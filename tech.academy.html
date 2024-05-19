@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylelesheet" href="style.css" />
+  <title>sipelajar</title>
+  <style>
+    body {
+      background-color: white#ffffff;
+      background-image: url(gedung1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div></div>
+  </section>
+</body>
+</head>
+
+<body>
+  <div class="container">
+  </div>
+  <style>
+    ody {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      /* Mengatur elemen ke bagian atas (flex-start) */
+      height: 100vh;
+      /* Mengisi tinggi layar secara penuh */
+      margin: 0;
+      /* Menghilangkan margin default */
+    }
+
+    h1 {
+      text-align: center;
+      /* Mengatur teks menjadi di tengah secara horizontal */
+      margin-top: 40px;
+      /* Jarak atas dari bagian atas layar */
+      font-size: 36px;
+      /* Ukuran font */
+      color: #333;
+      /* Warna teks */
+    }
+
+    /* Animasi teks berjalan */
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .welcome-text {
+      font-size: 40px;
+      animation: fadein 3s ease-out;
+    }
+
+
+
+    /* Tombol styling */
+    .button {
+      padding: 10px 20px;
+      font-size: 20px;
+      background-color: #efefef;
+      text-decoration: none;
+      color: #554d4d;
+      border: none;
+      border-radius: 25px;
+      box-shadow: -6px -6px 10px;
+
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #dcdcdc;
+    }
+
+    /* Menu dropdown */
+    .dropdown-content {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #f21111ef
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ffffff;
+    }
+
+    /* Detail tampilan */
+    #detail-pajak_bumi_bangunan {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    #latihan-soal {
+      display: none;
+      /* Defaultnya menyembunyikan konten latihan soal */
+    }
+
+    .button-back {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f1c40f;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-back:hover {
+      background-color: #d4ac0d;
+    }
+
+
+    /* Detail tampilan */
+    #detail-pajak_penghasilan {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    /* Detail tampilan */
+    #detail-pajak_bumi_bangunan {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    #detail-ekonomi_makro {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+
+    /* Detail tampilan */
+    #detail-pengantar_ilmu_ekonomi {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    #detail-ekonomi_makro {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .button-back {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f1c40f;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-back:hover {
+      background-color: #d31212;
+    }
+
+    #home-button {
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #home-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+      </div>
+      <div>
+        <h1 class="welcome-text">Selamat Datang di sipelajar</h1>
+      </div>
+    </div>
+    <a href="#" class="button" onclick="showMenu()">mata pelajaran</a>
+    <div id="menu" class="dropdown-content">
+      <a href="#" onclick="showSubMenu('akuntansi')">Akuntansi </a>
+      <a href="#" onclick="showSubMenu('ekonomi')">Ekonomi</a>
+      <a href="#" onclick="showSubMenu('manajemen')">manajemen</a>
+      <a href="#" onclick="showSubMenu('perpajakan')">Perpajakan</a>
+      <a href="#" onclick="showSubMenu ('')"></a>
+      <a href="#" onclick="showSubMenu ('')"></a>
+      <a href="#" onclick="showSubMenu ('')"></a>
+      <a href="#" onclick="showSubMenu ('')"></a>
+      <a href="#" onclick="showSubMenu ('')"></a>
+      <a href="#" onclick="showSubMenu ('')"></a>
+    </div>
+    <div id="submenu-ekonomi" class="dropdown-content">
+      <a href="#" onclick="showSubSubMenu('pengantar_ilmu_ekonomi')">pengantar ilmu ekonomi</a>
+      <a href="#" onclick="showSubSubMenu('ekonomi_makro')">ekonomi makro</a>
+    </div>
+    <div id="detail-pengantar_ilmu_ekonomi" style="display: none;">
+      <h1>konsep ilmu ekonomi</h1>
+      <p>Konsep dasar ilmu ekonomi mencakup beberapa ide dasar yang menjelaskan berbagai kejadian dalam perekonomian,
+        seperti tindakan dan pilihan yang ditentukan oleh pelaku ekonomi. Ilmu ekonomi muncul karena manusia selalu
+        ingin mendapatkan sesuatu melebihi sumber daya yang dimilikinya, yang disebut konsep kelangkaan. Selain konsep
+        kelangkaan, terdapat konsep dasar ilmu ekonomi lainnya, seperti biaya peluang, permintaan dan penawaran,
+        insentif, dan lainnya. Pemahaman tentang konsep-konsep dasar tersebut menjadi penting dalam mempelajari dan
+        menganalisis keputusan dan perilaku para pelaku ekonomi.
+        Ilmu ekonomi juga dapat didefinisikan sebagai ilmu yang mempelajari penggunaan sumber daya alam yang terbatas
+        dalam pemenuhan kebutuhan manusia yang tidak ada batasnya. Ilmu ekonomi juga sebagai ilmu yang mempelajari usaha
+        manusia dalam mencapai kemakmuran</p>
+      <button class="button-back" onclick="goBack()">Kembali</button>
+      </div>
+    <div id="detail-ekonomi_makro" style="display: none;">
+      <h1>ekonomi makro</h1>
+      <p>Ekonomi makro, juga dikenal sebagai makroekonomi, adalah studi tentang ekonomi secara keseluruhan. Makroekonomi
+        menjelaskan perubahan ekonomi yang mempengaruhi banyak masyarakat, perusahaan, dan pasar. Tujuan utama dari
+        ekonomi makro adalah untuk memahami dan mempengaruhi target-target kebijaksanaan seperti pertumbuhan ekonomi,
+        stabilitas harga, tenaga kerja, dan pencapaian keseimbangan neraca yang berkesinambungan. Dalam mempelajari
+        ekonomi makro, para pakar ekonomi memfokuskan pada perilaku agen-agen ekonomi secara keseluruhan (agregat) dan
+        analisis indikator-indikator agregat dan faktor-faktor ekonomi mikro yang mempengaruhi perekonomian</p>
+      <h2>konsep dasar</h2>
+      <p>Makroekonomi meliputi berbagai konsep dan variabel, tetapi selalu ada tiga topik utama untuk penelitian
+        makroekonomi.[2] Teori-teori mengenai makroekonomi biasanya terhubung dengan fenomena keluaran, pengangguran dan
+        inflasi. Di luar teori makroekonomi, topik-topik tersebut juga sangatlah penting untuk semua agen ekonomi
+        termasuk pekerja, konsumen dan produsen.</p>
+      <h2>pengeluaran dan pendapatan</h2>
+      <p>Keluaran nasional ialah total nilai seluruh produksi negara pada masa yang sudah ditentukan. Semua yang
+        diproduksi dan dijual menghasilkan pendapatan. Maka dari itu, keluaran dan pendapatan biasanya dianggap setara
+        dan dua istilah tersebut sering digunakan berganti-gantian. Keluaran bisa diukur sebagai jumlah pendapatan,
+        atau, bisa dilihat dari sisi produksi dan diukur sebagai jumlah nilai barang jadi dan jasa atau bisa juga dari
+        penjumlahan seluruh nilai tambah di dalam negeri. Keluaran ekonomi makro biasanya diukur dengan Produk Domestik
+        Bruto (PDB) atau salah satu akun nasional. Ekonom yang tertarik dengan kenaikan keluaran jangka panjang akan
+        mempelajari pertumbuhan ekonomi. Kemajuan teknologi, akumulasi mesin dan modal lainnya, serta pendidikan yang
+        lebih baik dan modal manusia semuanya akan berujung pada keluaran ekonomi lebih besar di selama berjalannya
+        waktu. Tetapi, keluaran tidak selalu naik secara konsisten. Siklus bisnis bisa menyebabkan penurunan keluaran
+        jangka pendek yang disebut resesi. Ekonom mencari kebijakan ekonomi makro yang bisa mencegah ekonomi anjlok ke
+        jurang resesi dan akhirnya bisa memacu pertumbuhan jangka panjang dengan lebih cepat.</p>
+      <h2>pengangguran</h2>
+      <img src="pengangguran.jpg" alt="">
+      <p>Jumlah pengangguran di sebuah ekonomi diukur dengan angka pengangguran, yaitu persentase pekerja-pekerja tanpa
+        pekerjaan yang ada di dalam angkatan kerja. Angkatan kerja hanya memasukan pekerja yang aktif mencari kerja.
+        Orang-orang pensiunan, mengejar pendidikan atau yang tidak mendapat dukungan mencari kerja karena ketiadaan
+        prospek kerja, tidaklah termasuk di dalam angkatan kerja.
+
+        Pengangguran sendiri bisa dibagi menjadi beberapa tipe yang semuanya berkaitan dengan sebab-sebab yang berbeda
+        pula. Pengangguran klasikal terjadi ketika gaji karyawan terlalu tinggi sehingga pengusaha tidak berani
+        memperkerjakan karyawan lebih dari yang sudah ada. Gaji bisa menjadi terlalu tinggi karena peraturan upah
+        minimum atau adanya aktivitas serikat pekerja. Sama halnya dengan pengangguran klasikal, pengangguran friksional
+        terjadi apabila ada lowongan pekerjaan untuk pekerja tetapi waktu untuk mencarinya menyebabkan adanya periode di
+        mana si pekerja tersebut menjadi pengangguran.[4]
+
+        Pengangguran struktural meliputi beberapa jenis penyebab pengangguran termasuk ketidakcocokan antara kemampuan
+        pekerja dan kemampuan yang dicari oleh pekerjaan yang ada.[5] Pengangguran besar-besaran bisa terjadi ketika
+        sebuah ekonomi mengalami masa transisi industri dan kemampuan para pekerja menjadi tak terpakai. Pengangguran
+        struktural itu juga cukup mirip dengan pengangguran friksional karena dua-duanya berkutat pada permasalahan
+        ketidakcocokan kemampuan pekerja dengan lowongan pekerjaan, tetapi pengangguran struktural berbeda karena
+        meliputi juga kebutuhan untuk menambah kemampuan diri, tidak hanya proses pencarian jangka pendek.[6]
+
+        Walaupun ada beberapa jenis pengangguran yang selalu ada saja mau bagaimanapun kedaaan ekonomi pada saat itu,
+        pengangguran siklikan terjadi ketika pertumbuhan ekonomi menjadi stagnan. Hukum Okun menunjukan hubungan empiris
+        antara pengangguran dan pertumbuhan ekonomi.[7] Versi asli dari Hukum Okun menyatakan bahwa 3% kenaikan keluaran
+        ekonomi akan mengakibatkan 1% penurunan angka pengangguran.[8]
+
+        Inflasi dan deflasi
+
+        moving-average periodik selama sepuluh tahun tentang perubahan tingkat harga dan pertumbuhan penawaran uang
+        (menggunakan ukuran M2, penawaran dari kurs keras dan uang dipegang untuk sebagian besar jenis rekening bank) di
+        Amerika dari tahun 1875 ke 2011. Dari sisi jangka panjang, kedua seri ini menunjukkan hubungan yang erat.
+        Kenaikan harga umum disebuah ekonomi disebut dengan inflasi. Ketika harga menurun, maka terjadi deflasi. Ekonom
+        mengukur perubahan harga ini menggunakan indeks harga. Inflasi bisa terjadi ketika suhu ekonomi menjadi terlalu
+        panas dan tumbuh terlalu cepat. Mirip dengan ini, ekonomi yang merosot bisa mengakibatkan deflasi.
+
+        Bank Sentral yang mengatur ketersediaan uang suatu negara, selalu mencoba menghindari adanya perubahan tingkat
+        harga menggunakan kebijakan moneter. Dengan menaikan tingkat suku bunga atau menurunkan ketersediaan uang di
+        dalam sebuah ekonomi akan menurunkan inflasi. Inflasi bisa mengakibatkan bertambahnya ketidakpastian dan
+        konsekuensi negatif lainnya. Deflasi bisa menurunkan keluaran ekonomi. Bank sentral akan mengusahakan stabilnya
+        harga untuk melindungi ekonomi dari akibat negatif atas fluktuasi harga.
+        Perubahan di tingkat harga bisa disebabkan oleh berbagai macam faktor. Teori kuantitas uang menyatakan bahwa
+        pergerakan tingkat harga itu berhubungan langsung dengan penawaran uang. Fluktuasi jangka pendek bisa juga
+        berhubungan dengan faktor moneter, tetapi perubahan pada permintaan agregat dan penawaran agregat bisa juga
+        mempengaruhi tingkat harga. Contohnya, penurunan di permintaan karena adanya resesi bisa mengakibatkan indeks
+        harga yang rendah dan deflasi. Syok penawaran negatif, seperti krisis minyak, akan menurunkan penawaran agregat
+        dan menyebabkan inflasi.</p>
+      <h2>inflasi dan deflasi</h2>
+      <p>Kenaikan harga umum disebuah ekonomi disebut dengan inflasi. Ketika harga menurun, maka terjadi deflasi. Ekonom
+        mengukur perubahan harga ini menggunakan indeks harga. Inflasi bisa terjadi ketika suhu ekonomi menjadi terlalu
+        panas dan tumbuh terlalu cepat. Mirip dengan ini, ekonomi yang merosot bisa mengakibatkan deflasi.
+
+        Bank Sentral yang mengatur ketersediaan uang suatu negara, selalu mencoba menghindari adanya perubahan tingkat
+        harga menggunakan kebijakan moneter. Dengan menaikan tingkat suku bunga atau menurunkan ketersediaan uang di
+        dalam sebuah ekonomi akan menurunkan inflasi. Inflasi bisa mengakibatkan bertambahnya ketidakpastian dan
+        konsekuensi negatif lainnya. Deflasi bisa menurunkan keluaran ekonomi. Bank sentral akan mengusahakan stabilnya
+        harga untuk melindungi ekonomi dari akibat negatif atas fluktuasi harga.
+
+        Perubahan di tingkat harga bisa disebabkan oleh berbagai macam faktor. Teori kuantitas uang menyatakan bahwa
+        pergerakan tingkat harga itu berhubungan langsung dengan penawaran uang. Fluktuasi jangka pendek bisa juga
+        berhubungan dengan faktor moneter, tetapi perubahan pada permintaan agregat dan penawaran agregat bisa juga
+        mempengaruhi tingkat harga. Contohnya, penurunan di permintaan karena adanya resesi bisa mengakibatkan indeks
+        harga yang rendah dan deflasi. Syok penawaran negatif, seperti krisis minyak, akan menurunkan penawaran agregat
+        dan menyebabkan inflasi.</p>
+        <video style="width: 30%px;" src="ekonomimakro.mp4" controls></video>
+    </div>
+    <div>
+      <div id="submenu-perpajakan" class="dropdown-content">
+        <a href="#" onclick="showSubSubMenu('pajak_penghasilan')">Pajak Penghasilan</a>
+        <a href="#" onclick="showSubSubMenu('pajak_pertambahan_nilai')">Pajak Pertambahan Nilai</a>
+        <a href="#" onclick="showSubSubMenu('pajak_bumi_bangunan')">Pajak Bumi Bangunan</a>
+      </div>
+      <div id="detail-pajak_penghasilan" style="display: none;">
+        <h1>pajak penghasilan</h1>
+        <h4>apa itu PPH, jenis PPH, subjek PPH & objek pajak penghasilan</h4>
+        <b>apa itu pajak penghasilan ?</b>
+        <p>Definisi Pajak Penghasilan atau PPh adalah pajak yang dibebankan atas suatu penghasilan yang diperoleh wajib
+          pajak, baik yang berasal dari Indonesia maupun dari luar negeri.
+
+          Dasar hukum PPh adalah Undang-Undang (UU) Nomor 7 Tahun 1983 tentang Pajak Penghasilan. UU ini mengalami empat
+          kali perubahan, yakni :</p>
+        <ol>-Undang-Undang Nomor 7 Tahun 1991 tentang Perubahan Atas UU No.7/1983 tentang Pajak Penghasilan</ol>
+        <ol>-Undang-Undang Nomor 10 Tahun 1994 tentang Perubahan Kedua UU No.7/1983 tentang Pajak Penghasilan</ol>
+        <ol>-Undang-Undang Nomor 17 Tahun 2000 tentang Perubahan Ketiga UU No.7/1983 tentang Pajak Penghasilan</ol>
+        <ol>-Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat UU No.7/1983 tentang Pajak Penghasilan.</ol>
+        <p>Selain itu, pengaturan terbaru tentang pajak penghasilan juga dalam UU Cipta Kerja No. 11 Tahun 2020 dan
+          melalui UU HPP Nomor 7 Tahun 2021 tentang Harmonisasi Peraturan Perpajakan.</p>
+        <b>Apa Saja Jenis Pajak Penghasilan?</b>
+        <p>Definisi PPh Pasal 21 adalah pajak atas penghasilan berupa gaji, upah, honorarium, tunjangan dan pembayaran
+          lain dengan nama dan dalam bentuk apa pun sehubungan dengan pekerjaan atau jabatan, jasa dan kegiatan yang
+          dilakukan oleh orang pribadi subjek pajak dalam negeri.</p>
+        <b>1. Objek PPh Pasal 21</b>
+        <p>Penghasilan yang diterima atau diperoleh pegawai tetap, baik berupa penghasilan yang bersifat teratur maupun
+          tidak teratur
+          Penghasilan yang diterima atau diperoleh penerima industri secara teratur berupa uang industri atau
+          penghasilan
+          sejenisnya
+          Penghasilan sehubungan dengan pemutusan hubungan kerja dan penghasilan sehubungan dengan industri yang
+          diterima
+          secara sekaligus berupa uang pesangon, uang manfaat industri, tunjangan hari tua</p>
+        <button class="button-back" onclick="goBack()">Kembali</button>
+      </div>
+      <div id="detail-pajak_bumi_bangunan" style="display: none">
+        <img src="gedung1.jpg" widht="200" height="200" />
+        <h1>Pajak Bumi Bangunan</h1>
+        <p>Apakah kalian sudah tahu apa itu pajak bumi bangunan?</p>
+        <p>
+          Pajak Bumi Bangunan merupakan pajak yang harus dibayarkan oleh setiap
+          masyarakat yang memiliki tanggungan atas kepemilikan bangunan yang.
+          Pajak Bumi dan Bangunan Perdesaan dan Perkotaan (PBB P2) adalah pajak
+          atas bumi dan bangunan yang memiliki, dikuasai, dan dimanfaatkan oleh
+          orang pribadi atau Badan, kecuali kawasan yang digunakan untuk
+          kegiatan usaha perkebunan, perhutanan dan pertambangan.
+        </p>
+
+        <b>Peran dan Tujuan Pajak Bumi Bangunan</b>
+
+        <p>
+          sumber Pendapatan Daerah PBB menjadi salah satu sumber utama
+          pendapatan bagi pemerintah daerah. Dana yang diperoleh dari PBB
+          digunakan untuk membiayai pembangunan infrastruktur, penyediaan
+          layanan publik, dan kebutuhan daerah lainnya. Regulasi Penggunaan
+          Tanah dan Properti PBB dapat digunakan sebagai instrumen regulasi
+          untuk mengendalikan penggunaan tanah dan properti. Dengan menetapkan
+          tarif pajak yang berbeda untuk tujuan tertentu, pemerintah dapat
+          mengarahkan pengembangan wilayah sesuai dengan kebijakan pembangunan.
+          Pengendalian Kenaikan Harga Properti PBB dapat berperan dalam
+          mengendalikan spekulasi dan kenaikan harga properti. Dengan mengenakan
+          pajak yang lebih tinggi pada properti yang tidak dimanfaatkan secara
+          optimal, pemerintah dapat merangsang pemilik properti untuk
+          memanfaatkannya dengan lebih efisien. Pemberdayaan Masyarakat Melalui
+          Dana PBB Pemerintah daerah dapat menggunakan dana PBB untuk
+          memberdayakan masyarakat melalui program-program pembangunan dan
+          kesejahteraan. Hal ini dapat mencakup pembangunan pendidikan,
+          kesehatan, dan infrastruktur yang meningkatkan kualitas hidup
+          masyarakat. Dukungan Kebijakan Lingkungan PBB juga dapat menjadi alat
+          untuk mendorong praktik-praktik ramah lingkungan. Pemerintah dapat
+          memberikan insentif atau penalti berdasarkan faktor-faktor lingkungan,
+          seperti penggunaan lahan hijau atau implementasi teknologi ramah
+          lingkungan
+        </p>
+        <b>keterkaitan dengan kehidupan sehari-hari</b>
+        <p>
+          Pembiayaan Pemerintah Daerah: PBB merupakan salah satu sumber
+          pendapatan penting bagi pemerintah daerah. Dengan membayar PBB,
+          masyarakat turut serta dalam pembiayaan pembangunan dan
+          penyelenggaraan layanan publik seperti pendidikan, kesehatan, dan
+          infrastruktur di tingkat lokal. Pengaturan Pemanfaatan Tanah dan
+          Bangunan: PBB dapat menjadi instrumen untuk mengatur pemanfaatan tanah
+          dan bangunan. Melalui tarif yang ditetapkan, pemerintah dapat
+          mendorong pemilik properti untuk menggunakan atau memanfaatkan tanah
+          dan bangunan secara efisien. Penyediaan Layanan Publik: Pendapatan
+          dari PBB dapat digunakan untuk meningkatkan kualitas layanan publik di
+          lingkungan tempat tinggal masyarakat, seperti peningkatan
+          infrastruktur jalan, saluran air, dan fasilitas umum lainnya.
+          Pengembangan Ekonomi Lokal: Pemungutan PBB juga dapat digunakan untuk
+          memfasilitasi pembangunan ekonomi lokal dengan memperbaiki
+          infrastruktur dan lingkungan sekitar, yang pada gilirannya dapat
+          meningkatkan nilai properti. Pengawasan dan Pembinaan Perpajakan:
+          Keterlibatan masyarakat dalam membayar PBB dapat meningkatkan
+          kesadaran tentang kewajiban perpajakan. Ini dapat menjadi faktor
+          pengawasan dan pembinaan perpajakan yang positif. Pengaruh pada Pasar
+          Properti: Kebijakan perpajakan, termasuk tarif PBB, dapat mempengaruhi
+          pasar properti. Peningkatan tarif PBB bisa memengaruhi harga jual dan
+          sewa properti, sehingga dapat menjadi pertimbangan dalam keputusan
+          pembelian atau investasi properti.
+        </p>
+        <p>
+          <b>Cara Menentukan Perhitungan Pajak Bumi dan Bangunan (PBB)</b>
+        </p>
+
+        <p>
+          Sebelum mulai menghitung PBB dengan cepat, terdapat 3 tahap yang
+          dilakukan dalam menghitung Pajak Bumi dan Bangunan (PBB), yaitu :
+        </p>
+        <p>
+          1. menetapkan Nilai Jual Objek Pajak (NJOP) Nilai Jual Objek Pajak
+          (NJOP) sendiri merupakan besarnya harga atas objek baik bumi maupun
+          bangunan atau dapat dikatakan pula sebagai harga untuk properti tanah
+          dan bangunan. Sebelum menghitung berapa besarnya Pajak Bumi dan
+          Bangunan (PBB) yang harus dibayarkan, maka langkah pertama harus
+          mengetahui terlebih dulu harga dari tanah dan bangunan tersebut.
+        </p>
+        <p>
+          2. Menentukan Nilai Jual Kena Pajak (NJKP) Nilai Jual Kena Pajak
+          (NJKP) merupakan suatu dasar dari penghitungan Pajak Bumi dan Bangunan
+          (PBB) sebagai nilai jual objek yang akan dimasukkan ke dalam
+          perhitungan pajak yang terutang. Berikut ini merupakan ketentuan
+          persentase dari Nilai Jual Kena Pajak (NJKP) yang telah ditetapkan
+          pemerintah berdasarkan Keputusan Menteri Keuangan No.201/KMK.04/2000
+          Tentang Penyesuaian Besarnya Nilai Jual Objek Pajak Tidak Kena Pajak
+          Sebagai Dasar Penghitungan Pajak Bumi dan Bangunan: 40% (empat puluh
+          persen) untuk perkebunan 40% (empat puluh persen) untuk pertambangan
+          40% (empat puluh persen) untuk kehutanan Sedangkan bagi objek pajak
+          lainnya seperti pedesaan dan perkotaan dapat dilihat dari Nilai Jual
+          Objek Pajak (NJOP), yaitu: 40% (empat puluh persen) untuk nilai lebih
+          dari Rp 1.000.000.000 (satu miliar rupiah), sedangkan 20% (dua puluh
+          persen) untuk nilai kurang dari Rp 1.000.000.000 (satu miliar rupiah).
+          Selain itu dalam penentuan NJKP, kita juga harus memperhatikan
+          ketentuan terkait Nilai Jual Objek Pajak Tidak Kena Pajak (NJOPTKP)
+          yang bisa jadi berbeda antara satu daerah dengan daerah lainnya,
+          sehingga harus dilakukan pengecekan terlebih dahulu untuk mendapatkan
+          nilai yang presisi.
+        </p>
+        <p>
+          3. Menghitung Pajak Bumi dan Bangunan (PBB) dengan cepat dan Mudah
+          Setelah mengetahui definisi dari Nilai Jual Objek Pajak (NJOP) dan
+          Nilai Jual Kena Pajak (NJKP), maka anda dapat langsung menghitung PBB
+          dengan cepat dan mudah menggunakan rumus berikut ini : PBB = 0,5% X
+          NJKP Rumus tersebut mengacu pada dasar hukum atas Peraturan Menteri
+          Keuangan Republik Indonesia Nomor 48/PMK.03/2021 tentang Tata Cara
+          Pendaftaran, Pelaporan, dan Pendataan Objek Pajak Pajak Bumi dan
+          Bangunan (PBB).
+        </p>
+        <p>
+          <b>contoh soal</b>
+        </p>
+
+        <p>
+          1. Pak Sanusi merupakan seorang pengusaha/entrepreneur di bidang
+          properti, beliau mempunyai properti kos-kosan seluas 200 meter persegi
+          dengan nilai Rp2.000.000 per meter. Kos-kosan ini berdiri di atas
+          tanah dengan luas 300 meter persegi dengan nilai Rp3.000.000 per
+          meter. Asumsi NJOPTKP untuk daerah tempat tinggal Pak Sanusi adalah
+          Rp0. Bagaimana perhitungan PBB atas properti milik Pak Sanusi?
+        </p>
+        <p></p>
+        <h2>jawab :</h2>
+        <p>
+          Nilai Kos-kosan = 200 x Rp. 2.000.000= Rp. 400.000.000 Nilai Tanah
+          NJOP NJKP = 300 x Rp. 3.000.000= Rp. 900.000.000 = Rp. 400.000.000 +
+          Rp. 900.000.000= Rp. 1.300.000.000 = 40% x Rp. 1.300.000.000= Rp.
+          520.000.000 Maka, Nilai Pajak Bumi dan Bangunan yang harus dibayar Pak
+          Sanusi adalah 0,5% x Rp. 520.000.000 = Rp. 2.600.000.
+        </p>
+
+        <p></p>
+        <p>
+          Melalui Undang-Undang Nomor 1 Tahun 2022 tentang Hubungan Keuangan
+          antara Pemerintah Pusat dan Daerah (UU HKPD), pemerintah resmi
+          menaikkan tarif PBB atau Tarif Pajak Bumi dan Bangunan Perdesaan dan
+          Perkotaan (PBB-P2). Merujuk Pasal 41 UU HKPD, besar tarif PBB-P2
+          paling tinggi 0,5%. Sedangkan tarif PBB-P2 berupa lahan produksi
+          pangan dan ternak ditetapkan lebih rendah daripada tarif untuk lahan
+          lainnya. Tarif PBB-P2 ini nantinya akan ditetapkan terlebih dahulu
+          dengan Peraturan Daerah (Perda) di masing-masing daerah.
+        </p>
+        <p></p>
+        <div>
+        </div>
+        <h1>tutorial</h1>
+        <video style="width: 30%px;" src="Cara Menghitung Pajak Bumi dan Bangunan.mp4" controls></video>
+        <div>
+          <button class="button" onclick="showLatihanSoal()">Latihan Soal</button>
+
+          <div id="latihan-soal">
+            <h1>Selamat Berlatih</h1>
+            <p>1. Seorang pemilik properti memiliki tanah seluas 500 meter persegi
+              dengan nilai jual per meter persegi sebesar Rp 2.000.000.
+              Berapakah jumlah Pajak Bumi yang harus dibayarkan?</p>
+            <p>2. Seorang pemilik properti memiliki tanah dengan nilai jual Rp 800.000.000 dan bangunan dengan nilai
+              jual
+              Rp 600.000.000. Jika tarif Pajak Bumi 0,3% dan tarif Pajak Bangunan 0,2%, berapakah total Pajak Bumi dan
+              Bangunan yang harus dibayarkan?</p>
+            <p>3. Seorang pemilik rumah memiliki bangunan dengan nilai jual sebesar Rp 500.000.000. Jika tarif Pajak
+              Bangunan sebesar 0,1%, berapakah jumlah Pajak Bangunan yang harus dibayarkan?
+            <p>4. Jika tarif Pajak Bumi sebesar 0,5%, berapakah jumlah Pajak Bumi yang harus dibayar oleh pemilik
+              properti
+              tersebut?</p>
+            <p>5. Bagaimana cara menentukan nilai jual objek pajak untuk keperluan Pajak Bumi dan Bangunan?</p>
+            <p>6. Apa saja jenis properti yang dikenakan Pajak Bumi dan Bangunan?</p>
+            <p>7. Bagaimana perhitungan Pajak Bumi dan Bangunan untuk properti yang belum dibangun?</p>
+            <p>8. Apa yang dimaksud dengan pembayaran Pajak Bumi dan Bangunan secara tahunan?</p>
+            <p>9. Jika nilai jual objek pajak sebesar Rp 2.500.000.000 dan tarif Pajak Bumi dan Bangunan sebesar 0,4%,
+              berapakah total Pajak Bumi dan Bangunan yang harus dibayar?</p>
+            <p>10. Bagaimana perhitungan Pajak Bumi dan Bangunan untuk properti yang dimiliki oleh perusahaan?</p>
+            <p>11. Bagaimana cara pemilik properti mengajukan keberatan jika ada ketidaksetujuan terhadap nilai jual
+              objek
+              pajak yang ditetapkan oleh otoritas pajak?</p>
+            <p>12. Rumah Pak Ahmad memiliki luas tanah 200 meter persegi dan luas bangunan 150 meter persegi. Tarif
+              pajak
+              bumi dan bangunan di daerah tersebut adalah Rp 1.000 per meter persegi. Berapakah jumlah pajak yang harus
+              dibayarkan Pak Ahmad?</p>
+            <p>13. Ibu Rita memiliki tanah seluas 300 meter persegi dan bangunan seluas 250 meter persegi. Tarif pajak
+              bumi
+              dan bangunan di wilayahnya adalah 1,5% dari nilai properti. Jika nilai properti tersebut adalah Rp
+              2.000.000, berapakah jumlah pajak yang harus dibayar oleh Ibu Rita?</p>
+            <p>14. Di sebuah kota, tarif pajak bumi dan bangunan adalah Rp 1.500 per meter persegi. Jika Pak Budi
+              memiliki
+              tanah seluas 400 meter persegi dan bangunan seluas 300 meter persegi, berapakah jumlah pajak yang harus
+              dibayarkan oleh Pak Budi?</p>
+
+          </div>
+          <button class="button-back" onclick="goBack()">Kembali</button>
+        </div>
+        <a href="#" id="home-button" onclick="goHome()">Home</a>
+      </div>
+      <script>
+
+        function showMenu() {
+          document.getElementById("menu").style.display = "block";
+        }
+
+        function showSubMenu(submenu) {
+          // Menyembunyikan semua submenu terlebih dahulu
+          var submenus = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < submenus.length; i++) {
+            submenus[i].style.display = "none";
+          }
+
+          // Menampilkan submenu yang dipilih
+          document.getElementById("submenu-" + submenu).style.display = "block";
+        }
+
+        function showSubSubMenu(subsubmenu) {
+          // Menyembunyikan semua subsubmenu terlebih dahulu
+          var subsubmenus = document.getElementsByClassName("detail-content");
+          for (var i = 0; i < subsubmenus.length; i++) {
+            subsubmenus[i].style.display = "none";
+          }
+
+          // Menampilkan subsubmenu yang dipilih
+          var detailElement = document.getElementById("detail-" + subsubmenu);
+          if (detailElement) {
+            detailElement.style.display = "block";
+          }
+        }
+        function goHome() {
+          // Tampilkan tampilan utama (selamat datang dan menu)
+          document.getElementById("detail-pajak_bumi_bangunan").style.display = 'none';
+          document.getElementById("submenu-perpajakan").style.display = 'block';
+        }
+        function goBack() {
+          document.getElementById("detail-pengantar_ilmu_ekonomi").style.display = "none";
+          document.getElementById("detail-ekonomi_makro").style.display = "none";
+          document.getElementById("submenu-Ekonomi").style.display = "block";
+        }
+        function goBack() {
+          // Menyembunyikan detail tampilan pajak bumi bangunan
+          document.getElementById("detail-pajak_bumi_bangunan").style.display = "none";
+          document.getElementById("detail-pajak_penghasilan").style.display = "none";
+          // Menampilkan kembali submenu perpajakan
+          document.getElementById("submenu-perpajakan").style.display = "block";
+        }
+        function showMenu() {
+          document.getElementById("menu").style.display = "block";
+        }
+
+        function showSubMenu(submenu) {
+          // Menyembunyikan semua submenu terlebih dahulu
+          var submenus = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < submenus.length; i++) {
+            submenus[i].style.display = "none";
+          }
+
+          // Menampilkan submenu yang dipilih
+          document.getElementById("submenu-" + submenu).style.display = "block";
+        }
+
+        function showSubSubMenu(subsubmenu) {
+          // Menyembunyikan semua subsubmenu terlebih dahulu
+          var subsubmenus = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < subsubmenus.length; i++) {
+            subsubmenus[i].style.display = "none";
+          }
+
+          // Menampilkan subsubmenu yang dipilih
+          var detailElement = document.getElementById("detail-" + subsubmenu);
+          if (detailElement) {
+            detailElement.style.display = "block";
+          }
+        }
+
+        function showLatihanSoal() {
+          // Menyaembunyikan elemen selamat datang dan tombol mulai belajar
+          document.querySelector(".welcome-text").style.display = "none";
+          document.querySelector(".button").style.display = "none";
+
+          // Menampilkan konten latihan soal
+          document.getElementById("latihan-soal").style.display = "block";
+        }
+        function goHome() {
+          // Sembunyikan semua konten kecuali selamat datang dan menu
+          document.getElementById("welcome").style.display = "block";
+          document.getElementById("menu").style.display = "none";
+          document.getElementById("content").innerHTML = ""; // Bersihkan konten
+
+          // Reset tampilan menu
+          var submenus = document.querySelectorAll('.dropdown-content');
+          submenus.forEach(function (submenu) {
+            submenu.style.display = "none";
+          });
+        }
+
+      </script>
+  </body>
+
+</html>
